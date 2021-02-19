@@ -1,0 +1,230 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Ziwei Pan - Resume LaTeX Template
+%
+% Github repository:
+% https://github.com/PanZiwei/resume
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass{article}
+
+\usepackage{fullpage}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage[T1]{fontenc}
+\usepackage{fancyhdr}
+\usepackage{lastpage}
+\usepackage{textgreek}
+
+% DEFINITIONS FOR RESUME
+
+\textheight=10in
+\pagestyle{fancy}
+\raggedright
+\fancyhf{}
+\renewcommand{\headrulewidth}{0pt}
+
+\setlength{\hoffset}{-2pt}
+\setlength{\footskip}{20pt}
+
+\def\bull{\vrule height 0.8ex width .7ex depth -.1ex }
+
+\newcommand{\contact}[3]{
+\vspace*{5pt}
+\begin{center}
+{\LARGE \scshape {#1}}\\
+\vspace{3pt}
+#2 
+\vspace{2pt}
+#3
+\end{center}
+\vspace*{-8pt}
+}
+
+\newcommand{\header}[1]{{
+\hspace*{-15pt}\vspace*{6pt} \textsc{#1}} \vspace*{-6pt} 
+\lineunder
+}
+
+\newcommand{\lineunder}{
+\vspace*{-8pt} \\ \hspace*{-18pt} 
+\hrulefill \\
+}
+
+\newcommand{\content}{
+\vspace*{2pt}%
+}
+
+\newcommand{\school}[4]{
+\textbf{#1} \labelitemi #2 \hfill #3 \\ #4 \vspace*{5pt}
+}
+
+\newcommand{\employer}[4]{{
+\vspace*{2pt}%
+\textbf{#1} #2 \hfill #3\\ #4 \vspace*{2pt}}
+}
+
+\newcommand{\project}[4]{{
+\vspace*{2pt}% 
+\textbf{#1} #2 \hfill #3\\ \textit{#4} \vspace*{2pt}}
+}
+
+\renewcommand{\labelitemi}{
+$\vcenter{\hbox{\tiny$\bullet$}}$\hspace*{3pt}
+}
+
+\renewcommand{\labelitemii}{
+$\vcenter{\hbox{\tiny$\bullet$}}$\hspace*{-3pt}
+}
+
+\newenvironment{bullet-list-major}{
+\begin{list}{\labelitemii}{\setlength\leftmargin{3pt} 
+\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}\end{list}
+}
+
+\newenvironment{bullet-list-minor}{
+\begin{list}{\labelitemii}{\setlength\leftmargin{15pt} 
+\topsep 0pt \itemsep -2pt}}{\vspace*{4pt}\end{list}
+}
+
+%\cfoot{
+%Last updated: Jan 7, 2021
+%}
+
+\rfoot{
+Page $\thepage\hspace*{3pt}\vert\hspace*{3pt}\pageref{LastPage}$
+}
+
+% END RESUME DEFINITIONS
+
+\begin{document}
+
+\small
+\smallskip
+\vspace*{-44pt}
+
+\contact{Ziwei Pan}
+{Farmington, CT, USA, 06032\\}
+{ziweipan9@gmail.com \labelitemi (1) 860-931-8926}
+\vspace{15pt}
+\header{Personal Profile}
+\content{A graduate student majoring in computational biology. Diverse experience in academic research, health consulting, journalism,field research, and NGO work. Always willing to learn.\vspace{5pt}}
+% \vspace*{4pt}%
+% \header{Objective}
+%     \content{To work in an environment that provides a challenging and rewarding career, ensuring a high level job satisfaction.\vspace{5pt}}
+
+\vspace*{4pt}%
+\header{Education}
+    \school{Uconn Health Center/The Jackson Laboratory}{Farmington, CT, USA}{Aug 2018 -- June 2023 (Expected)}
+    {\textit{PhD in Biomedical Science}}
+
+    \school{Chinese Academy of Sciences}{Beijing, China}{Jun 2018 -- Sep 2015}
+    {\textit{MS in Developmental Biology}}
+    
+    \school{Beijing Normal University}{Beijing, China}{Sep 2011 -- Jun 2015}
+    {\textit{BS in Chemistry}}
+    
+\vspace*{4pt}%
+\header{Experience}
+    \employer{Private Equity Intern}{-- Healthcare consultant}{Sep 2017 -- Dec 2017}{China International Capital Corporation Limited (CICC), Beijing, China}
+	\begin{bullet-list-minor}
+	\item Performed data collection and research report writing
+	\item Conducted industry research and pipeline analysis on healthcare and medicine area
+	\item Evaluated potential investments on multiple biomedical start-up companies including immunology therapy, DNA encoded compound library, cardiovascular drug
+    \end{bullet-list-minor}
+    
+    \employer{Primary School Volunteer Teacher}{-- NGO volunteer}{Sep 2016 -- Jun 2017}{Shanghai Duoyue Public Welfare cultural Center, Shanghai, China}
+	\begin{bullet-list-minor}
+	\item Run weekly course tutoring 20+ student in primary school for migrant workers' children 
+    \item Established Miaomiao Reading, the voluntary reading program’s partnership between NGO and school 
+    \end{bullet-list-minor}
+    
+    \employer{Student Journalist}{-- Volunteer journalist}{Sep 2016 -- Jun 2017}{Kepu Youth, Shanghai, China}
+	\begin{bullet-list-minor}
+	\item Served in student magazine affiliated to Chinese academy of Sciences Shanghai branch
+	\item Wrote science stories on young scientists 
+	\item Introduce latest scientific research to the general public  
+    \end{bullet-list-minor}
+
+    \employer{Journalist Intern}{-- Cultural journalist}{Oct 2015 -- Feb 2016}{Beijing Youth Daily, Beijing, China}
+	\begin{bullet-list-minor}
+	\item Wrote articles for cover story or feature story
+	\item Interviewed celebrities including writers, actors, directors, and singers to introduce their work to the public  \item Wrote cultural comments or cultural news brief
+    \end{bullet-list-minor}
+
+\vspace*{4pt}%
+\header{Projects}
+    \project{Methylation calling tool for Nanopore data}{}{Sep 2020 - Current }{The Jackson Laboratory}
+	\begin{bullet-list-minor}
+	\item Developing a new classifier based on deep learning method to detect cytosine modification states from Nanopore sequencing reads at single-molecular level 
+	\item Applied machine learning method to analyze Nanopore sequencing data
+	\item Provided a benchmark for current methylation calling tools
+    \end{bullet-list-minor}
+
+    \project{Cancer type classifier}{}{Sep 2019 - Sep 2020}{The Jackson Laboratory}
+	\begin{bullet-list-minor}
+	\item Apply 1D Inception convolutional neural network(1D-Inception) to develop a RNA-based classifier called CUP-AI-Dx to infer a tumor's primary tissue of origin
+	\item The article is selected as the top 10 content of EBioMedicine for 2020
+    \end{bullet-list-minor}
+
+    \project{Forecast COVID-19 daily cases at the county level}{}{Sep 2020 - Dec 2020}{Uconn Health}
+	\begin{bullet-list-minor}
+	\item Proposed a deep learning model based on a temporal graph convolutional network(T-GCN) to forecast COVID-19 at the county level in Connecticut, USA. 
+	\item Made make case count prediction at the county level in Connecticut with multiple features such as mobility, weather, demographics, and geographics
+	\item Conducted ablation studies to evaluate factor contributions to the spread of COVID-19.
+    \end{bullet-list-minor}
+
+
+\vspace*{4pt}%
+\header{Publication}
+    \content{Zhao, Y., \textbf{Pan, Ziwei}, Namburi, S., Pattison, A., Posner, A., Balachander, S., ... \& George, J. (2020). CUP-AI-Dx: A tool for inferring cancer tissue of origin and molecular subtype using RNA gene-expression data and artificial intelligence. EBioMedicine, 61, 103030.\\}
+    \content{Kuo, C. L., \textbf{Pan, Ziwei}, Pilling, L. C., Kuchel, G. A., \& Melzer, D. (2019). ABO gene and aging-related outcomes in over 379,000 European-descent participants of UK Biobank. Innovation in Aging, 3(Suppl 1), S925.\\}
+    \content{Fu, H., Cui, M., Tu, P., \textbf{Pan, Ziwei}, \& Liu, B. (2014). Evaluation of molecules based on the electron donor–acceptor architecture as near-infrared  \textbeta-amyloidal-targeting probes. Chemical Communications, 50(80), 11875-11878.}
+
+
+\vspace*{4pt}%
+\header{Awards \& Honors}
+    \begin{bullet-list-major}
+    \item Received graduate research assistantship from Uconn Health, 2018 -  
+    \vspace{2pt}
+    \item Won Excellence Award in national non-fiction writing competition held by Boya Tianxia Media Group(China) for the report on migration school, 2017.
+    \vspace{2pt}
+    \item Won 2nd Prize in National English Competition for College Students held by Ministry of Education(China), 2017.
+    \vspace{2pt}
+    \item Won 3rd Prize in Bayer 2016 Consumer Health Hackathon for the allergy triggers tracking app proposal, 2016.
+    \vspace{2pt}
+    \item Awarded 1st class in undergraduate winter field research competition held by Beijing Normal University for the report on education reform for college entrance examinations, 2014
+    \vspace{2pt}
+    \item Won 1st Prize in mathematical modeling competition held by Beijing Normal University, 2014
+    \item Received professional scholarship, Beijing Normal University, 2012 - 2014 
+    \end{bullet-list-major}
+    
+    
+\vspace*{4pt}%
+\header{Skillset}
+    \begin{bullet-list-major}
+    \item Programming Languages: Python, R, Golang(beginner)
+    \vspace{2pt}
+    \item Deep Learning Framework: Tensorflow/Keras
+    \vspace{2pt}
+    \item Operating Systems: OSX, Linux
+    \vspace{2pt}
+    \item Others: Bash, LaTeX, Git version control,  Jupyter, Docker/Singularity(beginner)
+    \vspace{2pt}
+    \item Natural languages: English, Chinese (Mandarin)
+    \end{bullet-list-major}
+
+
+    
+\vspace*{4pt}%
+\header{Miscellaneous}
+    \begin{bullet-list-major}
+    \item Blog: ziweipan.me
+    \vspace{2pt}
+    \item LinkedIn: https://www.linkedin.com/in/ziweipan
+    \vspace{2pt}
+    \item Github: www.github.com/PanZiwei
+    \vspace{2pt}
+    \end{bullet-list-major}
+
+\end{document}
