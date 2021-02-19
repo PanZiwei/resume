@@ -1,5 +1,5 @@
 # resume
-A resume template in LaTeX. It is inspired by Ganesh Mohan[https://github.com/ganesh2shiv/resume-latex-template] and Resumake[https://resumake.io/].
+A resume template in LaTeX. It is inspired by [Ganesh Mohan](https://github.com/ganesh2shiv/resume-latex-template) and [Resumake](https://resumake.io/).
 
 **Quick Start**
 1. Create a new project on [Overleaf](https://www.overleaf.com/)
